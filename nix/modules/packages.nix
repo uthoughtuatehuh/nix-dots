@@ -57,6 +57,7 @@
       spotify
       pavucontrol
       playerctl
+      swappy
       cava
       vlc
       mpv

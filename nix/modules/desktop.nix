@@ -20,5 +20,6 @@
   	  dedicatedServer.openFirewall = true;
   	  localNetworkGameTransfers.openFirewall = true;
   	};
+  	the-honkers-railway-launcher.enable = true;
   };
 }

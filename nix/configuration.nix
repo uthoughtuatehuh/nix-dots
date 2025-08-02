@@ -1,7 +1,11 @@
+let
+  aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
+in
 { config, pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
+    aagl-gtk-on-nix.module
     ./modules/bootloader.nix
     ./modules/networking.nix
     ./modules/users.nix
