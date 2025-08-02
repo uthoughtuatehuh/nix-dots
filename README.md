@@ -14,7 +14,3 @@
  - Shell: [**`Fish`**](https://github.com/fish-shell/fish-shell)
 
 </br>
-
-## Post-installation fixes:
-
-- To fix the cursor in Xwayland applications, create a file `~/.Xresources` with the following content: `Xcursor.theme: Bibata-Modern-Classic` and type the command `xrdb -merge ~/.Xresources`
