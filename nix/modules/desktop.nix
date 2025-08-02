@@ -9,8 +9,16 @@
     };
   };
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
+  programs = {
+  	hyprland = {
+  		enable = true;
+  		xwayland.enable = true;
+  	};
+  	steam = {
+  	  enable = true;
+  	  remotePlay.openFirewall = true;
+  	  dedicatedServer.openFirewall = true;
+  	  localNetworkGameTransfers.openFirewall = true;
+  	};
   };
 }
