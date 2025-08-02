@@ -4,37 +4,26 @@
   # Import hardware configuration
   imports = [
     ./hardware-configuration.nix
-    ./modules/hyprland/default.nix
-    ./modules/rofi/default.nix
-    ./modules/waybar/default.nix
   ];
 
-  # Bootloader configuration
-  boot = {
-    loader = {
-      grub = {
-        enable = true;
-        device = "/dev/nvme0n1";
-        useOSProber = true;
-        enableCryptodisk = true;
-      };
-    };
-    kernelPackages = pkgs.linuxPackages_latest;
-    initrd = {
-      luks.devices = {
-        "luks-0b0f7811-085a-4565-8f05-02538d52cefe" = {
-          device = "/dev/disk/by-uuid/0b0f7811-085a-4565-8f05-02538d52cefe";
-          keyFile = "/boot/crypto_keyfile.bin";
-        };
-        "luks-8cf7c3ca-86ca-4b51-ad1b-73d31f753f69" = {
-          keyFile = "/boot/crypto_keyfile.bin";
-        };
-      };
-      secrets = {
-        "/boot/crypto_keyfile.bin" = null;
-      };
-    };
+  # Bootloader.
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/nvme0n1";
+  boot.loader.grub.useOSProber = true;
+
+  # Use latest kernel.
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  boot.initrd.luks.devices."luks-44c2cc59-077f-42a7-8fb4-6fce96c566f2".device = "/dev/disk/by-uuid/44c2cc59-077f-42a7-8fb4-6fce96c566f2";
+  # Setup keyfile
+  boot.initrd.secrets = {
+    "/boot/crypto_keyfile.bin" = null;
   };
+
+  boot.loader.grub.enableCryptodisk = true;
+
+  boot.initrd.luks.devices."luks-d8ca3645-83c9-402b-aef5-1b53f7947052".keyFile = "/boot/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-44c2cc59-077f-42a7-8fb4-6fce96c566f2".keyFile = "/boot/crypto_keyfile.bin";
 
   # Networking configuration
   networking = {
@@ -159,7 +148,10 @@
       XCURSOR_THEME = "Bibata-Modern-Classic";
       XCURSOR_SIZE = "24";
     };
-    systemPackages = with pkgs; [    
+    systemPackages = with pkgs; [
+      # TEST
+      pamixer
+      
       # Editors
       micro
       vscodium
@@ -187,12 +179,18 @@
       waybar
       rofi
       wl-clipboard
-      hyprpaper
+      mpvpaper
+      # hyprpaper
+      zenity
       hyprlock
       grim
       slurp
       fuzzel
       ydotool
+      ffmpeg
+      libva
+      libvdpau
+      wayland-protocols
 
       # File management
       nautilus
@@ -205,6 +203,7 @@
       playerctl
       cava
       vlc
+      mpv
 
       # GUI and desktop utilities
       dunst
@@ -225,6 +224,7 @@
       # Wine and compatibility
       wine
       winetricks
+      protonplus
 
       # Development
       nodejs
