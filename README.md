@@ -17,4 +17,4 @@
 
 ## Post-installation fixes:
 
-- To fix the cursor in Xwayland applications, create a file `~/.Xresources` with the following content: `Xcursor.theme: Bibata-Modern-Classic` and type the command  and type the command `xrdb -merge ~/.Xresources`
+- To fix the cursor in Xwayland applications, create a file `~/.Xresources` with the following content: `Xcursor.theme: Bibata-Modern-Classic` and type the command `xrdb -merge ~/.Xresources`
