@@ -27,7 +27,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.user = import ./home.nix; # Путь к вашей конфигурации Home Manager
+            home-manager.users.user = import ./home.nix;
           }
         ];
       };
