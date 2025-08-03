@@ -1,11 +1,7 @@
-let
-  aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
-in
 { config, pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
-    aagl-gtk-on-nix.module
     ./modules/bootloader.nix
     ./modules/networking.nix
     ./modules/users.nix
@@ -20,6 +16,9 @@ in
   # Nix package manager settings
   nixpkgs.config.allowUnfree = true;
   services.flatpak.enable = true;
+
+  # Enable Flakes and the new nix command
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # System version
   system.stateVersion = "25.05";
