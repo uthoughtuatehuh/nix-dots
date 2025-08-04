@@ -1,12 +1,16 @@
 { config, pkgs, ... }:
 {
-  services.xserver = {
-    enable = true;
-    videoDrivers = [ "nvidia" ];
-    xkb = {
-      layout = "us";
-      variant = "";
+  services = {
+    xserver = {
+      enable = true;
+      videoDrivers = [ "nvidia" ];
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
+      displayManager.lightdm.enable = false;
     };
+    displayManager.ly.enable = true;
   };
 
   programs = {
