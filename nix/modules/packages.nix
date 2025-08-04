@@ -12,6 +12,7 @@
       libvdpau
       gnome-keyring
       gnome-bluetooth
+      polkit
     ];
   };
 }

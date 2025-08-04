@@ -11,8 +11,8 @@
 
   programs = {
   	hyprland = {
-  		enable = true;
-  		xwayland.enable = true;
+	  enable = true;
+	  xwayland.enable = true;
   	};
   	steam = {
   	  enable = true;
@@ -20,6 +20,6 @@
   	  dedicatedServer.openFirewall = true;
   	  localNetworkGameTransfers.openFirewall = true;
   	};
-  	the-honkers-railway-launcher.enable = true;
+  	honkers-railway-launcher.enable = true;
   };
 }

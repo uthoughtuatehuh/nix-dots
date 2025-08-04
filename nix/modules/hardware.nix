@@ -4,16 +4,6 @@
     graphics = {
       enable = true;
       enable32Bit = true;
-    };
-    nvidia = {
-      modesetting.enable = true;
-      open = false;
-      nvidiaSettings = true;
-      powerManagement.enable = false;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-    };
-    opengl = {
-      enable = true;
       extraPackages = with pkgs; [
         vulkan-loader
         libglvnd
@@ -22,6 +12,13 @@
         vulkan-loader
         libglvnd
       ];
+    };
+    nvidia = {
+      modesetting.enable = true;
+      open = false;
+      nvidiaSettings = true;
+      powerManagement.enable = false;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
   };
 

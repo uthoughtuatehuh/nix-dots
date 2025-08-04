@@ -2,6 +2,7 @@
 {
   imports = [
     ./home/packages.nix
+    ./home/configs.nix
   ];
 
   home.username = "user";
