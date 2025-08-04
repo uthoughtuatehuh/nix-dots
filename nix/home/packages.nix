@@ -78,5 +78,9 @@
 
     # Themes and cursors
     bibata-cursors
+
+    # Fonts
+    nerd-fonts.symbols-only
+    noto-fonts
   ];
 }
