@@ -29,5 +29,8 @@
     ./configs/rofi/config.rasi.nix
     ./configs/rofi/powermenu.rasi.nix
     ./configs/rofi/powermenu.sh.nix
+
+    # XRESOURCES
+    ./configs/Xresources.nix
   ];
 }
