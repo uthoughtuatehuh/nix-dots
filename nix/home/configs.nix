@@ -30,6 +30,9 @@
     ./configs/rofi/powermenu.rasi.nix
     ./configs/rofi/powermenu.sh.nix
 
+    # WAYBAR
+    ./configs/waybar/waybar.nix
+
     # XRESOURCES
     ./configs/Xresources.nix
   ];
