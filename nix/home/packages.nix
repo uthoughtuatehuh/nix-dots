@@ -48,6 +48,7 @@
     spotify
     pavucontrol
     playerctl
+    obs-studio
     swappy
     cava
     vlc
