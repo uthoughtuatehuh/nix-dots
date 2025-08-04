@@ -13,7 +13,6 @@
       gnome-keyring
       gnome-bluetooth
       polkit
-      # ly
     ];
   };
 }
