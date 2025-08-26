@@ -1,64 +1,58 @@
+{ config, pkgs, ... }:
 {
-  imports = [
-    ./config-jsonc.nix
-    ./style-css.nix
-    ./icons/adobe-photoshop-svg.nix
-    ./icons/affinity-designer-svg.nix
-    ./icons/affinity-photo-svg.nix
-    ./icons/affinity-publisher-svg.nix
-    ./icons/anki-svg.nix
-    ./icons/beekeeper-studio-svg.nix
-    ./icons/blender-svg.nix
-    ./icons/bruno-svg.nix
-    ./icons/calculator-svg.nix
-    ./icons/darktable-svg.nix
-    ./icons/davinci-resolve-png.nix
-    ./icons/dbeaver-svg.nix
-    ./icons/discord-svg.nix
-    ./icons/docker-svg.nix
-    ./icons/excalidraw-png.nix
-    ./icons/figma-svg.nix
-    ./icons/file-manager-svg.nix
-    ./icons/filezilla-svg.nix
-    ./icons/firefox-svg.nix
-    ./icons/gimp-svg.nix
-    ./icons/godot-svg.nix
-    ./icons/google-chrome-svg.nix
-    ./icons/heroic-svg.nix
-    ./icons/inkscape-svg.nix
-    ./icons/jetbrains-idea-svg.nix
-    ./icons/jetbrains-pycharm-svg.nix
-    ./icons/jetbrains-rider-svg.nix
-    ./icons/jetbrains-webstorm-svg.nix
-    ./icons/krita-svg.nix
-    ./icons/lutris-svg.nix
-    ./icons/neovim-svg.nix
-    ./icons/obsidian-svg.nix
-    ./icons/obs-studio-svg.nix
-    ./icons/pinta-svg.nix
-    ./icons/postman-svg.nix
-    ./icons/ryujinx-svg.nix
-    ./icons/shotcut-svg.nix
-    ./icons/skype-svg.nix
-    ./icons/spotify-svg.nix
-    ./icons/steam-svg.nix
-    ./icons/telegram-svg.nix
-    ./icons/terminal-svg.nix
-    ./icons/unity-svg.nix
-    ./icons/vs-code-svg.nix
-    ./icons/whatsapp-svg.nix
-    ./icons/wireshark-svg.nix
-    ./icons/zed-svg.nix
-    ./icons/zen-svg.nix
-    ./scripts/adobe_photoshop-sh.nix
-    ./scripts/affinity_designer-sh.nix
-    ./scripts/affinity_photo-sh.nix
-    ./scripts/affinity_publisher-sh.nix
-    ./scripts/cheatsheet-py.nix
-    ./scripts/reload-sh.nix
-    ./styles/_bar-scss.nix
-    ./styles/_colours-scss.nix
-    ./styles/_dock-scss.nix
-    ./styles/index-scss.nix
-  ];
+  xdg.configFile = {
+    "waybar/config.jsonc".source = ./config.jsonc;
+    "waybar/style.css".source = ./style.css;
+    "waybar/icons/adobe-photoshop.svg".source = ./icons/adobe-photoshop.svg;
+    "waybar/icons/affinity-designer.svg".source = ./icons/affinity-designer.svg;
+    "waybar/icons/affinity-photo.svg".source = ./icons/affinity-photo.svg;
+    "waybar/icons/anki.svg".source = ./icons/anki.svg;
+    "waybar/icons/beekeeper-studio.svg".source = ./icons/beekeeper-studio.svg;
+    "waybar/icons/blender.svg".source = ./icons/blender.svg;
+    "waybar/icons/bruno.svg".source = ./icons/bruno.svg;
+    "waybar/icons/calculator.svg".source = ./icons/calculator.svg;
+    "waybar/icons/darktable.svg".source = ./icons/darktable.svg;
+    "waybar/icons/davinci-resolve-png".source = ./icons/davinci-resolve.png;
+    "waybar/icons/dbeaver.svg".source = ./icons/dbeaver.svg;
+    "waybar/icons/discord.svg".source = ./icons/discord.svg;
+    "waybar/icons/docker.svg".source = ./icons/docker.svg;
+    "waybar/icons/excalidraw-png".source = ./icons/excalidraw.png;
+    "waybar/icons/figma.svg".source = ./icons/figma.svg;
+    "waybar/icons/file-manager.svg".source = ./icons/file-manager.svg;
+    "waybar/icons/filezilla.svg".source = ./icons/filezilla.svg;
+    "waybar/icons/firefox.svg".source = ./icons/firefox.svg;
+    "waybar/icons/gimp.svg".source = ./icons/gimp.svg;
+    "waybar/icons/godot.svg".source = ./icons/godot.svg;
+    "waybar/icons/google-chrome.svg".source = ./icons/google-chrome.svg;
+    "waybar/icons/heroic.svg".source = ./icons/heroic.svg;
+    "waybar/icons/inkscape.svg".source = ./icons/inkscape.svg;
+    "waybar/icons/jetbrains-idea.svg".source = ./icons/jetbrains-idea.svg;
+    "waybar/icons/jetbrains-pycharm.svg".source = ./icons/jetbrains-pycharm.svg;
+    "waybar/icons/jetbrains-rider.svg".source = ./icons/jetbrains-rider.svg;
+    "waybar/icons/jetbrains-webstorm.svg".source = ./icons/jetbrains-webstorm.svg;
+    "waybar/icons/krita.svg".source = ./icons/krita.svg;
+    "waybar/icons/lutris.svg".source = ./icons/lutris.svg;
+    "waybar/icons/neovim.svg".source = ./icons/neovim.svg;
+    "waybar/icons/obsidian.svg".source = ./icons/obsidian.svg;
+    "waybar/icons/obs-studio.svg".source = ./icons/obs-studio.svg;
+    "waybar/icons/pinta.svg".source = ./icons/pinta.svg;
+    "waybar/icons/postman.svg".source = ./icons/postman.svg;
+    "waybar/icons/ryujinx.svg".source = ./icons/ryujinx.svg;
+    "waybar/icons/shotcut.svg".source = ./icons/shotcut.svg;
+    "waybar/icons/skype.svg".source = ./icons/skype.svg;
+    "waybar/icons/spotify.svg".source = ./icons/spotify.svg;
+    "waybar/icons/steam.svg".source = ./icons/steam.svg;
+    "waybar/icons/telegram.svg".source = ./icons/telegram.svg;
+    "waybar/icons/terminal.svg".source = ./icons/terminal.svg;
+    "waybar/icons/unity.svg".source = ./icons/unity.svg;
+    "waybar/icons/vs-code.svg".source = ./icons/vs-code.svg;
+    "waybar/icons/whatsapp.svg".source = ./icons/whatsapp.svg;
+    "waybar/icons/wireshark.svg".source = ./icons/wireshark.svg;
+    "waybar/icons/zed.svg".source = ./icons/zed.svg;
+    "waybar/icons/zen.svg".source = ./icons/zen.svg;
+    "waybar/styles/_bar.scss".source = ./styles/_bar.scss;
+    "waybar/styles/_colours.scss".source = ./styles/_colours.scss;
+    "waybar/styles/_dock.scss".source = ./styles/_dock.scss;
+    "waybar/styles/index.scss".source = ./styles/index.scss;
+  };
 }

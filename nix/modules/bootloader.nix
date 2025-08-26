@@ -10,11 +10,11 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.initrd.luks.devices = {
-    "luks-9db7ad92-dc1e-4aa8-bfc6-59422e94f6b4" = {
-      device = "/dev/disk/by-uuid/9db7ad92-dc1e-4aa8-bfc6-59422e94f6b4";
+    "luks-fce9778b-6dac-496a-bcd0-448cc8a1ce1c" = {
+      device = "/dev/disk/by-uuid/fce97778b-6dac-496a-bcd0-448cc8a1ce1c";
       keyFile = "/boot/crypto_keyfile.bin";
     };
-    "luks-fc1bd4b8-4fe4-4cf9-a6f0-b735b9cae6ff" = {
+    "luks-43c9992c-8ddb-4dc8-b493-6e8aad05d8df" = {
       keyFile = "/boot/crypto_keyfile.bin";
     };
   };
