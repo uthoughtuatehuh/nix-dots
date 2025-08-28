@@ -42,6 +42,10 @@
       source = ./configs/hypr/scripts/switch_workspace.sh;
       executable = true;
     };
+    "hypr/scripts/zoom.sh" = {
+      source = ./configs/hypr/scripts/zoom.sh;
+      executable = true;
+    };
   };
 
   home.file.".Xresources".source = ./configs/Xresources;

@@ -2,76 +2,77 @@
 {
   home.packages = with pkgs; [
     # Editors
-    micro
     vscodium
+    micro
 
     # Browsers
-    firefox
     chromium
+    firefox
 
     # Terminal and shell
     kitty
     fish
 
     # System utilities
-    pamixer
-    wget
-    git
-    unzip
     usbutils
-    btop
-    fastfetch
-    fzf
+    pamixer
     cmake
+    unzip
+    wget
+    btop
     tree
     htop
+    fzf
+    git
+    jq
 
     # Wayland utilities
-    waybar
-    rofi
     wl-clipboard
-    mpvpaper
-    zenity
     hyprlock
-    grim
-    slurp
-    fuzzel
+    mpvpaper
     ydotool
+    fuzzel
+    zenity
     ffmpeg
+    waybar
+    slurp
+    grim
+    rofi
 
     # File management
-    nautilus
     file-roller
+    nautilus
     gvfs
 
     # Audio and media
-    spotify
     pavucontrol
-    playerctl
     obs-studio
+    playerctl
+    spotify
     swappy
     cava
     vlc
     mpv
 
     # GUI and desktop utilities
-    dunst
-    flameshot
-    dconf-editor
     gnome-control-center
     gnome-themes-extra
+    dconf-editor
     gnome-boxes
-    nwg-look
-    libnotify
     libadwaita
+    flameshot
+    libnotify
+    nwg-look
+    dunst
 
     # Communication
+    telegram-desktop
     vesktop
 
     # Wine and compatibility
-    wine
     winetricks
     protonplus
+    wine
 
     # Development
     nodejs
