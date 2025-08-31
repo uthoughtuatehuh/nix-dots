@@ -26,24 +26,23 @@
     };
 
     # HYPRLAND
-    "hypr/hyprland.conf".source = ./configs/hypr/hyprland.conf;
-    "hypr/hyprlock.conf".source = ./configs/hypr/hyprlock.conf;
-    "hypr/modules/env.conf".source = ./configs/hypr/modules/env.conf;
-    "hypr/modules/execs.conf".source = ./configs/hypr/modules/execs.conf;
-    "hypr/modules/general.conf".source = ./configs/hypr/modules/general.conf;
-    "hypr/modules/keybinds.conf".source = ./configs/hypr/modules/keybinds.conf;
-    "hypr/modules/rules.conf".source = ./configs/hypr/modules/rules.conf;
-    "hypr/modules/variables.conf".source = ./configs/hypr/modules/variables.conf;
-    "hypr/scripts/switch_wallpaper.sh" = {
-      source = ./configs/hypr/scripts/switch_wallpaper.sh;
-      executable = true;
-    };
-    "hypr/scripts/switch_workspace.sh" = {
-      source = ./configs/hypr/scripts/switch_workspace.sh;
-      executable = true;
-    };
-    "hypr/scripts/zoom.sh" = {
-      source = ./configs/hypr/scripts/zoom.sh;
+    "hypr/hypridle.conf".source = ./configs/hypr/hypridle.conf;
+    "hypr/hyprland/animations.conf".source = ./configs/hypr/hyprland/animations.conf;
+    "hypr/hyprland/decoration.conf".source = ./configs/hypr/hyprland/decoration.conf;
+    "hypr/hyprland/env.conf".source = ./configs/hypr/hyprland/env.conf;
+    "hypr/hyprland/execs.conf".source = ./configs/hypr/hyprland/execs.conf;
+    "hypr/hyprland/general.conf".source = ./configs/hypr/hyprland/general.conf;
+    "hypr/hyprland/group.conf".source = ./configs/hypr/hyprland/group.conf;
+    "hypr/hyprland/input.conf".source = ./configs/hypr/hyprland/input.conf;
+    "hypr/hyprland/keybinds.conf".source = ./configs/hypr/hyprland/keybinds.conf;
+    "hypr/hyprland/misc.conf".source = ./configs/hypr/hyprland/misc.conf;
+    "hypr/hyprland/rules.conf".source = ./configs/hypr/hyprland/rules.conf;
+	"hypr/hyprland.conf".source = ./configs/hypr/hyprland.conf;
+	"hypr/variables.conf".source = ./configs/hypr/variables.conf;
+	"hypr/scheme/default.conf".source = ./configs/hypr/scheme/default.conf;
+    
+    "hypr/scripts/wsaction.fish" = {
+      source = ./configs/hypr/scripts/wsaction.fish;
       executable = true;
     };
   };

@@ -7,12 +7,14 @@
     };
     systemPackages = with pkgs; [
       # System-level dependencies
+      nvidia-vaapi-driver
       wayland-protocols
-      libva
-      libvdpau
-      gnome-keyring
       gnome-bluetooth
+      gnome-keyring
+      libva-utils
+      libvdpau
       polkit
+      libva
     ];
   };
 }

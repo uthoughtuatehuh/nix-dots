@@ -13,13 +13,5 @@
     ./modules/filesystems.nix
   ];
 
-  # Nix package manager settings
-  nixpkgs.config.allowUnfree = true;
-  services.flatpak.enable = true;
-
-  # Enable Flakes and the new nix command
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # System version
   system.stateVersion = "25.05";
 }

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
     # Editors
@@ -79,9 +79,6 @@
 
     # Themes and cursors
     bibata-cursors
-
-    # Fonts
-    nerd-fonts.symbols-only
-    noto-fonts
+    adw-gtk3
   ];
 }

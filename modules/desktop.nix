@@ -10,7 +10,11 @@
       };
       displayManager.lightdm.enable = false;
     };
+    flatpak = {
+      enable = true;
+    };
     displayManager.ly.enable = true;
+    gvfs.enable = true;
   };
 
   programs = {
@@ -26,4 +30,11 @@
   	};
   	honkers-railway-launcher.enable = true;
   };
+
+  nixpkgs.config = {
+  	allowUnfree = true;
+  	cudaSupport = true;
+  };
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
