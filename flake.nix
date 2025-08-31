@@ -11,9 +11,13 @@
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, aagl-gtk-on-nix, ... }:
+  outputs = { self, nixpkgs, home-manager, aagl-gtk-on-nix, caelestia-shell, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -28,6 +32,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
+            home-manager.sharedModules = [ caelestia-shell.homeManagerModules.default ];
             home-manager.users.user = import ./home.nix;
           }
         ];
