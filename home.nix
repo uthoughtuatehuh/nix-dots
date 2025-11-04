@@ -1,13 +1,17 @@
 { config, pkgs, inputs, ... }:
-{
+let
+  enabledProfiles = [
+    "caelestia"
+    # "waybar"
+    "shared" 
+  ];
+  
+  profileImports = map (profile: ./profiles + "/${profile}/default.nix") enabledProfiles;
+in {
   imports = [
     ./home/packages.nix
     ./home/desktop.nix
-
-    ./profiles/shared/default.nix
-    ./profiles/caelestia/default.nix
-    # ./profiles/waybar/default.nix
-  ];
+  ] ++ profileImports;
 
   home.username = "user";
   home.homeDirectory = "/home/user";
