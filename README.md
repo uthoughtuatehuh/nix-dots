@@ -6,7 +6,7 @@
 
  - OS: [**`NixOS`**](https://nixos.org/)
  - WM: [**`Hyprland`**](https://hyprland.org)
- - Bar: [**`Waybar`**](https://github.com/Alexays/Waybar)
+ - Bar: [**`Waybar`**](https://github.com/Alexays/Waybar) / [**`Caelestia`**](https://github.com/caelestia-dots/shell) (Custom QML-based bar)
  - Terminal: [**`Kitty`**](https://github.com/kovidgoyal/kitty)
  - App Launcher: [**`Rofi`**](https://github.com/davatorium/rofi)
  - Notify Daemon: [**`Dunst`**](https://github.com/dunst-project/dunst)
@@ -14,6 +14,36 @@
  - Display Manager: [**`Ly`**](https://github.com/fairyglade/ly)
  
 </br>
+
+## 🎥 Demonstration
+Check out the profile switching in action: [**YouTube Video**](https://youtu.be/Pp6Z5P39hMg) *(link to be added)*
+
+## 🎯 Profile System
+This configuration features a modular profile system that allows switching between different desktop environments:
+
+- **`waybar`** - Traditional setup with Waybar, Rofi, and Dunst
+- **`caelestia`** - Experimental QML-based desktop with custom compositor integration  
+- **`shared`** - Common configurations applied to all profiles (Fish shell, Kitty terminal, etc.)
+
+### Profile Selection
+Profiles are enabled in `home.nix` using a simple list:
+```nix
+let
+  enabledProfiles = [
+    "caelestia"  # Currently active profile
+    # "waybar"   # Commented out - inactive
+    "shared"     # Always enabled for base configs
+  ];
+in {
+  # Configuration...
+}
+```
+
+Each profile includes:
+- **Systemd services** for automatic startup management
+- **Custom configurations** for all components  
+- **Package sets** specific to the profile
+- **Wallpaper and theme management**
 
 ## Installation
 Copy the files from /nix/ to /etc/nixos, but:
