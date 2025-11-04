@@ -1,0 +1,13 @@
+hardware-configuration.nix
+
+*.age
+*.gpg
+secrets/
+passwords/
+
+*.tmp
+*.swp
+*~
+
+.direnv/
+result/
