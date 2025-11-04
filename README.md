@@ -46,7 +46,7 @@ Each profile includes:
 - **Wallpaper and theme management**
 
 ## Installation
-Copy the files from /nix/ to /etc/nixos, but:
+Copy the files from repo to /etc/nixos, but:
 
 - Modify `modules/bootloader.nix` for yourself, if this is not done, there will be problems with the launch
 - Modify `modules/filesystems.nix` for yourself, this config contains information about mounting a disk by UID in /mnt/d/
