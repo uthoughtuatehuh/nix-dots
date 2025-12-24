@@ -37,7 +37,7 @@
       homeDirectory = "/home/${username}";
 
       userConfig = {
-      	inherit username homeDirectory;
+        inherit username homeDirectory;
       };
 
       system = "x86_64-linux";

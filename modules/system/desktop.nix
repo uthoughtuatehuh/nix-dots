@@ -14,6 +14,11 @@
     flatpak = {
       enable = true;
     };
+
+    gnome = {
+      gnome-keyring.enable = true;
+      gcr-ssh-agent.enable = true;
+    };
     
     displayManager.ly.enable = true;
     gvfs.enable = true;

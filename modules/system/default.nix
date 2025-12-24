@@ -11,8 +11,8 @@ let
     "security"
     "desktop"
     "users"
-    "fonts"   
-    "nix"    
+    "fonts"
+    "nix"
   ];
 in
 {
