@@ -1,6 +1,12 @@
 { config, pkgs, lib, ... }:
-{
-  programs.nixcord.config.plugins = {
+{  
+  programs.nixcord = {
+    enable = true;
+    discord.enable = true;
+    vesktop.enable = true;
+  };
+
+  config.plugins = {
     accountPanelServerProfile.enable = true;
     spotifyShareCommands.enable = true;
     messageClickActions.enable = true;
@@ -29,5 +35,5 @@
       enable = true;
       deleteStyle = "overlay";
     };
-  };
+  }
 }

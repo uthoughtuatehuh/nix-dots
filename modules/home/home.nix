@@ -10,6 +10,7 @@ let
 in {
   imports = [
     ./default.nix
+    ./temp.nix
   ] ++ profileImports;
 
   home.username = userConfig.username;
