@@ -1,44 +1,67 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
-  services = {
-    xserver = {
-      enable = true;
-      videoDrivers = [ "nvidia" ];
-      xkb = {
-        layout = "us";
-        variant = "";
+  options.configlib = {
+    services = {
+      flatpak = {
+        enable = lib.mkOption {
+          type = lib.types.true;
+        };
       };
-      displayManager.lightdm.enable = false;
     };
-    
-    flatpak = {
-      enable = true;
+    programs = {
+      steam.enable = lib.mkOption {
+        type = lib.types.bool;
+      };
+      honkers-railway-launcher.enable = lib.mkOption {
+        type = lib.types.bool;
+      };
+      sleepy-launcher.enable = lib.mkOption {
+        type = lib.types.bool;
+      };
     };
-
-    gnome = {
-      gnome-keyring.enable = true;
-      gcr-ssh-agent.enable = true;
-    };
-    
-    displayManager.ly.enable = true;
-    gvfs.enable = true;
   };
+  
+  config = {
+    services = {
+      xserver = {
+        enable = true;
+        videoDrivers = [ "nvidia" ];
+        xkb = {
+          layout = "us";
+          variant = "";
+        };
+        displayManager.lightdm.enable = false;
+      };
+    
+      flatpak = {
+        enable = config.configlib.services.flatpak.enable;
+      };
 
-  programs = {
-    firejail.enable = true;
-  	hyprland = {
-	  enable = true;
-	  xwayland.enable = true;
-  	};
+      gnome = {
+        gnome-keyring.enable = true;
+        gcr-ssh-agent.enable = true;
+      };
+    
+      displayManager.ly.enable = true;
+      gvfs.enable = true;
+    };
+
+    programs = {
+      firejail.enable = true;
+      hyprland = {
+        enable = true;
+        xwayland.enable = true;
+      };
   	    
-  	steam = {
-  	  enable = true;
-  	  remotePlay.openFirewall = true;
-  	  dedicatedServer.openFirewall = true;
-  	  localNetworkGameTransfers.openFirewall = true;
-  	};
+      steam = {
+        enable = config.configlib.programs.steam.enable;
+        remotePlay.openFirewall = true;
+        dedicatedServer.openFirewall = true;
+        localNetworkGameTransfers.openFirewall = true;
+      };
   	
-  	honkers-railway-launcher.enable = true;
-  	sleepy-launcher.enable = true;
+      honkers-railway-launcher.enable = config.configlib.programs.honkers-railway-launcher.enable;
+      sleepy-launcher.enable = config.configlib.programs.sleepy-launcher.enable;
+    };
   };
 }

@@ -2,7 +2,7 @@
 
 let
   desktopModules = [
-    "obs-studido"
+    "obs-studio"
     "firefox"
     "themes"
     "media"
