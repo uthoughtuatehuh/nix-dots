@@ -4,7 +4,6 @@ let
   systemModules = [
     "virtualization"
     "bootloader"
-    "lanzaboote"
     "networking"
     "packages"
     "hardware"

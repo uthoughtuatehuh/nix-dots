@@ -3,7 +3,6 @@
 let
   devModules = [
     "reverse-engineering"
-    "virtualization"
     "development"
     "vpn"
   ];

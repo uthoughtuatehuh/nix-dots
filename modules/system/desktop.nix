@@ -4,7 +4,7 @@
     services = {
       flatpak = {
         enable = lib.mkOption {
-          type = lib.types.true;
+          type = lib.types.bool;
         };
       };
     };

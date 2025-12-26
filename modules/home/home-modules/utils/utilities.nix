@@ -4,5 +4,6 @@
     libreoffice
     wireshark
     libnotify
+    fastfetch
   ];
 }
