@@ -3,10 +3,7 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.libvirtd.qemu = {
     package = pkgs.qemu_kvm;
-    swtpm.enable = true;  # Оставляем для эмуляции TPM (полезно для Windows 11 и passthrough)
-    # УДАЛИТЬ эти строки:
-    # ovmf.enable = true;
-    # ovmf.packages = [ pkgs.OVMFFull.fd ];
+    swtpm.enable = true;
   };
   networking.firewall.trustedInterfaces = [ "virbr0" ];
 
@@ -19,7 +16,7 @@
     qemu_kvm
     dnsmasq
     swtpm
-    OVMF  # Можно оставить для ручного доступа, но не обязательно
+    OVMF
   ];
 
   virtualisation.spiceUSBRedirection.enable = true;

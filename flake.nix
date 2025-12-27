@@ -28,9 +28,14 @@
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, aagl-gtk-on-nix, nixcord, caelestia-shell, lanzaboote }@inputs:
+  outputs = { self, nixpkgs, home-manager, aagl-gtk-on-nix, nixcord, caelestia-shell, lanzaboote, disko }@inputs:
 
     let
       username = "user";
@@ -60,6 +65,7 @@
           ./modules/system/configuration.nix
           aagl-gtk-on-nix.nixosModules.default
           lanzaboote.nixosModules.lanzaboote
+          disko.nixosModules.disko
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
