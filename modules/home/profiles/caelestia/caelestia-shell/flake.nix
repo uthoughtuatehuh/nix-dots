@@ -10,7 +10,8 @@
     };
 
     caelestia-cli = {
-      url = "github:caelestia-dots/cli";
+      # url = "github:caelestia-dots/cli";
+      url = "path:../caelestia-cli";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.caelestia-shell.follows = "";
     };
