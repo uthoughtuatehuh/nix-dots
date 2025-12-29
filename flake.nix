@@ -19,11 +19,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    caelestia-cli = {
-      url = "path:./modules/home/profiles/caelestia/caelestia-cli";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixcord = {
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,7 +35,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, aagl-gtk-on-nix, nixcord, caelestia-shell, caelestia-cli, lanzaboote, disko }@inputs:
+  outputs = { self, nixpkgs, home-manager, aagl-gtk-on-nix, nixcord, caelestia-shell, lanzaboote, disko }@inputs:
 
     let
       username = "user";

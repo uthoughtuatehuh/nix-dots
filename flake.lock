@@ -24,23 +24,6 @@
     },
     "caelestia-cli": {
       "inputs": {
-        "caelestia-shell": "caelestia-shell",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "path": "./modules/home/profiles/caelestia/caelestia-cli",
-        "type": "path"
-      },
-      "original": {
-        "path": "./modules/home/profiles/caelestia/caelestia-cli",
-        "type": "path"
-      },
-      "parent": []
-    },
-    "caelestia-cli_2": {
-      "inputs": {
         "caelestia-shell": [
           "caelestia-shell"
         ],
@@ -63,34 +46,11 @@
     },
     "caelestia-shell": {
       "inputs": {
-        "caelestia-cli": [
-          "caelestia-cli"
-        ],
+        "caelestia-cli": "caelestia-cli",
         "nixpkgs": [
-          "caelestia-cli",
           "nixpkgs"
         ],
         "quickshell": "quickshell"
-      },
-      "locked": {
-        "path": "../caelestia-shell",
-        "type": "path"
-      },
-      "original": {
-        "path": "../caelestia-shell",
-        "type": "path"
-      },
-      "parent": [
-        "caelestia-cli"
-      ]
-    },
-    "caelestia-shell_2": {
-      "inputs": {
-        "caelestia-cli": "caelestia-cli_2",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "quickshell": "quickshell_2"
       },
       "locked": {
         "path": "./modules/home/profiles/caelestia/caelestia-shell",
@@ -361,28 +321,6 @@
     "quickshell": {
       "inputs": {
         "nixpkgs": [
-          "caelestia-cli",
-          "caelestia-shell",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1766386896,
-        "narHash": "sha256-1uql4y229Rh+/2da99OVNe6DfsjObukXkf60TYRCvhI=",
-        "owner": "quickshell-mirror",
-        "repo": "quickshell",
-        "rev": "3918290c1bcd93ed81291844d9f1ed146672dbfc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "quickshell-mirror",
-        "repo": "quickshell",
-        "type": "github"
-      }
-    },
-    "quickshell_2": {
-      "inputs": {
-        "nixpkgs": [
           "caelestia-shell",
           "nixpkgs"
         ]
@@ -404,8 +342,7 @@
     "root": {
       "inputs": {
         "aagl-gtk-on-nix": "aagl-gtk-on-nix",
-        "caelestia-cli": "caelestia-cli",
-        "caelestia-shell": "caelestia-shell_2",
+        "caelestia-shell": "caelestia-shell",
         "disko": "disko",
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
