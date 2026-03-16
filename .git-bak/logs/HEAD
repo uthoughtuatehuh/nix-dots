@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 e438f52bdd4e431887f4a7b62b4d256ad11c051e quanve <quanvepluxary@proton.me> 1771955604 +0100	commit (initial): Initial commit: full rewrite and refactoring of NixOS configuration from scratch
+e438f52bdd4e431887f4a7b62b4d256ad11c051e 0000000000000000000000000000000000000000 quanve <quanvepluxary@proton.me> 1771955634 +0100	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 e438f52bdd4e431887f4a7b62b4d256ad11c051e quanve <quanvepluxary@proton.me> 1771955634 +0100	Branch: renamed refs/heads/master to refs/heads/main
+e438f52bdd4e431887f4a7b62b4d256ad11c051e a537268071eabd03f64ade2e25d792acc732b447 quanve <quanvepluxary@proton.me> 1771955776 +0100	commit: Initial commit: full rewrite and refactoring of NixOS configuration from scratch
